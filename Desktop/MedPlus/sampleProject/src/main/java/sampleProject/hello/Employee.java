@@ -1,0 +1,18 @@
+package sampleProject.hello;
+
+public class Employee {
+public int code;
+public String empname;
+public int getCode() {
+	return code;
+}
+public void setCode(int code) {
+	this.code = code;
+}
+public String getEmpname() {
+	return empname;
+}
+public void setEmpname(String empname) {
+	this.empname = empname;
+}
+}

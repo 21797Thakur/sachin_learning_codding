@@ -1,0 +1,10 @@
+package com.medplus.insurance.utilities;
+
+public class PolicyQuestionDBQueries {
+	public static final String GETQUESLIST ="SELECT * FROM POLICY_QUESTION WHERE Bus_seg_id =(SELECT BUS_SEG_ID FROM BUSINESS_SEGMENT WHERE BUS_SEG_NAME =(SELECT BUSINESSSEGMENT FROM ACCOUNT WHERE ACCOUNTNUMBER=?))";
+	public static final String GETQUESID ="SELECT POL_QUES_ID FROM POLICY_QUESTION WHERE BUS_SEG_ID =?";
+	public static final String GETANS1 = "SELECT POL_QUES_ANS1 FROM POLICY_QUESTION WHERE Bus_seg_id =? AND POL_QUES_ID=?";
+	public static final String GETANS2 = "SELECT POL_QUES_ANS2 FROM POLICY_QUESTION WHERE Bus_seg_id =? AND POL_QUES_ID=?";
+	public static final String GETANS3 = "SELECT POL_QUES_ANS3 FROM POLICY_QUESTION WHERE Bus_seg_id =? AND POL_QUES_ID=?";
+	public static final String GETQUSIDLIST = "SELECT POL_QUES_ID FROM POLICY_QUESTION WHERE pol_ques_desc=? AND BUS_SEG_ID=?";
+}

@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+ 
+     <bean id="employee" class="bean.Employee" autowire="byType" scope="prototype" init-method="start" destroy-method="stop">
+     <property name="empno" value="1234124"></property>
+     <property name="empname" value="medplus"></property>
+     <property name="loc" value="hyderabad"></property>
+<!--      <property name="address" ref="address"></property> -->
+     <constructor-arg name="empno" value="1234124"></constructor-arg>
+     <constructor-arg name="empname" value="medplus"></constructor-arg>
+     <constructor-arg name="loc" value="medplus"></constructor-arg>
+     </bean>
+     <bean id="address" class="bean.Address">
+     <property name="street" value="hitech city"></property>
+     <property name="pincode" value="12343"></property>
+     </bean>
+ </beans>
